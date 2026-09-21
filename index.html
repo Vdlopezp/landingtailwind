@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing tailwind</title>
+  <!-- 1. Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 2. Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="min-h-screen bg-gray-50">
+        <!-- Topbar -->
+        <header class="h-14 bg-[#F5B04B] flex items-center">
+          <div class="max-w-6xl w-full mx-auto px-4 flex items-center">
+            <nav class="flex gap-8 text-sm font-medium text-gray-900">
+              <a class="hover:underline" href="#">Hombre</a>
+              <a class="hover:underline" href="./mujer/index.html">Mujer</a>
+              <a class="hover:underline" href="">Sobre nosotros</a>
+              <a class="hover:underline" href="./login/index.html">Iniciar sesion</a> 
+              <a class="hover:underline" href="./dashboard/index.html">Dashboard</a> 
+            </nav>
+      
+            <div class="ml-auto flex items-center gap-6">
+              <!-- Search icon -->
+              <button class="p-1 rounded hover:bg-white/40" aria-label="Buscar">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010 18a7.5 7.5 0 006.65-1.65z"/>
+                </svg>
+              </button>
+      
+              <!-- User icon -->
+              <button class="p-1 rounded hover:bg-white/40" aria-label="Cuenta">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 11a4 4 0 100-8 4 4 0 000 8z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20 8v6"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M23 11h-6"/>
+                </svg>
+              </button>
+      
+              <!-- Cart icon -->
+              <button class="p-1 rounded hover:bg-white/40" aria-label="Carrito">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h15l-1.5 9h-12z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l-2-2"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 20a1 1 0 100-2 1 1 0 000 2z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 20a1 1 0 100-2 1 1 0 000 2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+      
+        <main class="max-w-6xl mx-auto px-4 py-10">
+          <!-- Title -->
+          <h2 class="text-center text-lg md:text-xl text-gray-800 mb-8">
+            Compra por categoria
+          </h2>
+      
+          <!-- Categories grid (6 items) -->
+          <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 ">
+            <!-- Item 1 -->
+            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+              <div class=" h-44 md:h-48 w-full h-auto bg-gradient-to-br from-rose-300 to-amber-200 hover:scale-[1.06] transition-transform duration-300">
+                <img src="./img/shirts.jpeg" alt="">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+                SHIRTS
+              </div>
+            </a>
+      
+            <!-- Item 2 -->
+            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+              <div class="h-44 md:h-48 w-full bg-gradient-to-br from-slate-700 to-slate-200 hover:scale-[1.06] transition-transform duration-300">
+                <img src="./img/denim.jpeg" alt="">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+                DENIM
+              </div>
+            </a>
+      
+            <!-- Item 3 -->
+            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+              <div class="h-44 md:h-48 w-full bg-gradient-to-br from-amber-100 to-orange-200 hover:scale-[1.06] transition-transform duration-300">
+                <img src="./img/tees.jpeg" alt="">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+                TEES
+              </div>
+            </a>
+      
+            <!-- Item 4 -->
+            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+              <div class="h-44 md:h-48 w-full bg-gradient-to-br from-indigo-900 to-blue-200 hover:scale-[1.06] transition-transform duration-300">
+                <img src="./img/pants.jpeg" alt="">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+                PANTS
+              </div>
+            </a>
+      
+            <!-- Item 5 -->
+            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+              <div class="h-44 md:h-48 w-full bg-gradient-to-br from-amber-200 to-rose-200 hover:scale-[1.06] transition-transform duration-300">
+                <img src="./img/sweater.jpeg" alt="">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+                SWEATERS
+              </div>
+            </a>
+      
+            <!-- Item 6 -->
+            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+              <div class="h-44 md:h-48 w-full  bg-gradient-to-br from-gray-900 to-gray-300 hover:scale-[1.06] transition-transform duration-300">
+                <img src="./img/outwear.jpeg" alt="">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+                OUTERWEAR
+              </div>
+            </a>
+          </section>
+      
+          <!-- Banners -->
+          <section class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Banner left -->
+            <div class="relative h-64 overflow-hidden rounded-lg bg-gradient-to-br from-red-300 to-sky-200">
+              <div class="absolute inset-0 opacity-90 bg-[radial-gradient(circle_at_30%_30%,rgba(0,0,0,0.15),transparent_60%)]">
+                <img src="./img/blackred.jpeg" alt="">
+              </div>
+              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300 ">
+                SHOP THE LATEST
+              </button>
+            </div>
+      
+            <!-- Banner middle -->
+            <div class="relative h-64 overflow-hidden rounded-lg bg-gradient-to-br from-gray-900 to-gray-300">
+              <div class="absolute inset-0 opacity-90 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)]">
+                <img src="./img/blackandwhite.jpeg" alt="">
+              </div>
+              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+                SHOP YOUR FAVORITES
+              </button>
+            </div>
+      
+            <!-- Banner right -->
+            <div class="relative h-64 overflow-hidden rounded-lg bg-gradient-to-br from-amber-400 to-orange-200">
+              <div class="absolute inset-0 opacity-90 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)]">
+                <img src="./img/amber.jpeg" alt="">
+              </div>
+              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+                SHOP OCCASION
+              </button>
+            </div>
+          </section>
+        </main>
+      </div>
+      
+
+</body>
+</html>

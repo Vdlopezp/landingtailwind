@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing tailwind</title>
+  <!-- 1. Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 2. Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-slate-100 font-sans antialiased min-h-screen flex">
+
+  <!-- SIDEBAR (Desktop) -->
+  <aside class="hidden lg:flex flex-col w-64 bg-white-900/60 backdrop-blur-xl border-r border-slate-800/80 p-6">
+    <div class="flex items-center gap-3 mb-8">
+      <div
+        class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-700/50 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-cyan-500/20">
+        T
+      </div>
+      <span class="font-extrabold tracking-wider text-black">Todo a la <span class="text-amber-500">mano</span></span>
+    </div>
+
+    <nav class="space-y-1.5 flex-1">
+      <a href="#"
+        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-sm font-semibold">
+        📊 Resumen
+      </a>
+      <a href="#"
+        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 text-sm font-medium transition-colors">
+        📈 Reportes
+      </a>
+      <a href="#"
+        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 text-sm font-medium transition-colors">
+        👥 Clientes
+      </a>
+      <a href="#"
+        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 text-sm font-medium transition-colors">
+        📦 Inventario
+      </a>
+    </nav>
+  </aside>
+
+  <div class="flex-1 flex flex-col min-w-0">
+
+    <!-- TOPBAR -->
+    <header
+      class="h-18 px-6 bg-white-900/40 backdrop-blur-md border-b border-slate-800/80 flex items-center justify-between sticky top-0 z-20">
+      <div class="flex items-center gap-3 lg:hidden">
+        <span class="font-black text-cyan-400 text-lg">Todo a la mano</span>
+      </div>
+
+      <div class="hidden sm:flex items-center flex-1 max-w-md">
+        <input type="search" placeholder="Buscar productos ..."
+          class="w-full bg-gray-200 border border-slate-800 rounded-xl px-4 py-2 text-xs text-black focus:outline-none focus:border-amber-400">
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span class="text-[11px] font-bold text-emerald-400">ONLINE</span>
+        </div>
+        <img src="/img/logo.png"
+          class="w-20 h-15  border-cyan-900/50">
+      </div>
+    </header>
+
+    <!-- DASHBOARD CONTENT -->
+    <main class="p-6 lg:p-8 space-y-8 flex-1 overflow-y-auto">
+
+      <!-- GRID DE MÉTRICAS -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="p-6 bg-amber-500/50 backdrop-blur-xl border border-slate-800/80 rounded-2xl hover:border-cyan-500/40 transition-all group">
+          <p class="text-xs font-semibold text-slate-800 uppercase">Ventas</p>
+          <h3 class="text-3xl font-black text-white mt-1 group-hover:text-amber-900 transition-colors">9.5M</h3>
+          <span class="text-xs text-emerald-400 font-bold mt-3 inline-block">+14.2% crecimiento</span>
+        </div>
+        <div
+          class="p-6 bg-amber-500/50 backdrop-blur-xl border border-slate-800/80 rounded-2xl hover:border-cyan-500/40 transition-all group">
+          <p class="text-xs font-semibold text-slate-800 uppercase">Productos disponibles</p>
+          <h3 class="text-3xl font-black text-white mt-1 group-hover:text-amber-900 transition-colors">850</h3>
+          <span class="text-xs text-emerald-400 font-bold mt-3 inline-block">100% operativo</span>
+        </div>
+        <div
+          class="p-6 bg-amber-500/50 backdrop-blur-xl border border-slate-800/80 rounded-2xl hover:border-cyan-500/40 transition-all group">
+          <p class="text-xs font-semibold text-slate-800 uppercase">Entrega estimada</p>
+          <h3 class="text-3xl font-black text-white mt-1 group-hover:text-amber-900 transition-colors">4 dias</h3>
+          <span class="text-xs text-emerald-400 font-bold mt-3 inline-block">Aproximadamente</span>
+        </div>
+        <div
+          class="p-6 bg-amber-500/50 backdrop-blur-xl border border-slate-800/80 rounded-2xl hover:border-cyan-500/40 transition-all group">
+          <p class="text-xs font-semibold text-slate-800 uppercase">Disponibilidad</p>
+          <h3 class="text-3xl font-black text-white mt-1 group-hover:text-amber-900 transition-colors">95.9%</h3>
+          <span class="text-xs text-emerald-400 font-bold mt-3 inline-block">Productos</span>
+        </div>
+      </section>
+
+      <!-- TABLA DE ACTIVIDAD -->
+      <section class="bg-amber-900/10 backdrop-blur-xl border border-slate-800/80 rounded-2xl p-6">
+        <h3 class="text-base font-bold text-black mb-4">Gestión de productos</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead>
+              <tr class="border-b border-slate-800 text-gray-400 uppercase">
+                <th class="pb-3">Producto (SKU / ID)</th>
+                <th class="pb-3">Categoría</th>
+                <th class="pb-3">Stock / Disponibilidad</th>
+                <th class="pb-3">Estado</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60">
+              <tr>
+                <td class="py-3.5 font-mono text-cyan-400 font-bold">#CL-901 </td>
+                <td class="py-3.5 text-gray-700">Sweater</td>
+                <td class="py-3.5 text-gray-700">24</td>
+                <td class="py-3.5"><span
+                    class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400">Disponible</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 font-mono text-cyan-400 font-bold">#CL-408 </td>
+                <td class="py-3.5 text-gray-700">Pants</td>
+                <td class="py-3.5 text-gray-700">3</td>
+                <td class="py-3.5"><span
+                    class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-400">Por
+                    agotar</span></td>
+              </tr>
+              <tr>
+                <td class="py-3.5 font-mono text-cyan-400 font-bold">#CL-412 </td>
+                <td class="py-3.5 text-gray-700">Outwear</td>
+                <td class="py-3.5 text-gray-700">0</td>
+                <td class="py-3.5"><span
+                    class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-500/10 text-red-400">Agotado</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>
