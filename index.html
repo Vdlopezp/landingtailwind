@@ -17,6 +17,28 @@
 
   <!-- 2. Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            ping: 'ping 4s cubic-bezier(0, 0, 0.2, 1) infinite',
+          },
+          keyframes: {
+            ping: {
+              '75%, 100%': {
+                transform: 'scale(2)',
+                opacity: '0',
+              },
+            },
+          },
+        },
+      },
+    }
+    </script>
+    
+
 </head>
 <body>
     
@@ -27,9 +49,13 @@
             <div class="h-14 flex items-center justify-between">
               
               <!-- Logo o título -->
-              <div class="font-bold text-gray-900">
-                Todo a la mano
-              </div>
+              <div class="flex items-center">
+                <img src="./img/logo-removebg-preview.png" alt="Logo" class="h-12 w-auto mr-2"/> <!-- Ajusta la ruta y el tamaño según necesites -->
+                <div class="font-bold text-gray-900">
+                    Todo a la mano
+                </div>
+            </div>
+            
         
               <!-- Menú escritorio -->
               <nav class="hidden lg:flex gap-8 text-sm font-medium text-gray-900">
@@ -164,6 +190,16 @@
               </div>
             </a>
           </section>
+
+          <section class="mt-10 bg-[#F5B04B] p-6 rounded-lg">
+            <div class="max-w-6xl mx-auto text-center">
+              <h2 class="text-2xl font-bold text-slate-900 mb-4 animate-ping ;
+              opacity: 0; ">¡Ofertas Exclusivas!</h2>
+              
+              <p class="text-gray-700 mb-4">Aprovecha descuentos de hasta el 50% en productos seleccionados.</p>
+              <a href="#" class="bg-gray-900 text-white font-semibold py-2 px-4 rounded hover:bg-slate-600 transition duration-300">Ver Ofertas</a>
+            </div>
+          </section>
       
                   <!-- Banners -->
         <section class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -212,15 +248,59 @@
       </main>
     </div>
 
+    <main class="max-w-6xl mx-auto px-4 py-10">
+    <section id="contacto" class="bg-amber-500/20 py-10">
+      <!-- Se añadió px-4 para que no pegue a los lados en móvil -->
+      <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-6">Contacto</h2>
+          
+          <!-- Se añadió gap-8 para separar formulario y mapa -->
+          <div class="flex flex-wrap -mx-4">
+              
+              <!-- Formulario -->
+              <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                  <input type="text" placeholder="Tu Nombre" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30"/>
+                  <input type="email" placeholder="Número Telefónico" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30"/>
+                  <input type="text" placeholder="Dirección de Correo" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30"/>
+                  <input type="text" placeholder="Tema" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30"/>
+                  <textarea placeholder="Tu Mensaje" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30" cols="30" rows="10"></textarea>
+                  <button class="w-full bg-black text-white py-2 px-4 rounded hover:bg-amber-500 transition">
+                      Enviar <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+              </div>
+  
+              <!-- Mapa -->
+              <div class="w-full md:w-1/2 px-4">
+                  <img src="./img/ubicacion.jpeg" alt="Ubicación" class="w-full h-auto mb-4 rounded shadow-md"/>
+                  <div class="info bg-white p-4 rounded shadow">
+                      <ul class="list-none">
+                          <li class="flex items-center mb-2">
+                              <i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Garzón, Huila, Colombia
+                          </li>
+                          <li class="flex items-center mb-2">
+                              <i class="fa-solid fa-mobile-screen mr-2 text-amber-500"></i> Llama: +57 350 514 1750
+                          </li>
+                          <li class="flex items-center">
+                              <i class="fa-solid fa-envelope mr-2 text-amber-500"></i> E-mail: danielopezsb@gmail.com
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </main>
+  
+
       <!-- Footer -->
-      <footer class="bg-gray-900 text-gray-300 mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-10">
+      <footer class="bg-gray-900 text-gray-300 mt-6">
+        <div class="max-w-6xl mx-auto px-4 py-5">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
             <!-- Marca -->
             <div>
               <h2 class="text-white text-xl font-bold mb-4">Todo a la mano</h2>
-              <p class="text-sm leading-6">
+              <p class="text-xs leading-6">
                 Moda, estilo y calidad para tu día a día.
               </p>
             </div>
@@ -228,18 +308,18 @@
             <!-- Enlaces -->
             <div>
               <h3 class="text-white font-semibold mb-4">Enlaces</h3>
-              <ul class="space-y-2 text-sm">
+              <ul class="space-y-2 text-xs">
                 <li><a href="#" class="hover:text-white">Hombre</a></li>
                 <li><a href="./mujer/index.html" class="hover:text-white">Mujer</a></li>
                 <li><a href="./sobrenosotros/index.html" class="hover:text-white">Sobre nosotros</a></li>
-                <li><a href="#" class="hover:text-white">Contacto</a></li>
+                <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
               </ul>
             </div>
 
             <!-- Ayuda -->
             <div>
               <h3 class="text-white font-semibold mb-4">Ayuda</h3>
-              <ul class="space-y-2 text-sm">
+              <ul class="space-y-2 text-xs">
                 <li><a href="#" class="hover:text-white">Preguntas frecuentes</a></li>
                 <li><a href="#" class="hover:text-white">Envíos y devoluciones</a></li>
                 <li><a href="#" class="hover:text-white">Políticas</a></li>
@@ -273,7 +353,7 @@
           </div>
 
           <!-- Línea inferior -->
-          <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+          <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
             <p>© 2026 Todo a la mano. Todos los derechos reservados.</p>
             <P>Desarrollado por Victor Daniel López</P>
             <div class="flex gap-4">
