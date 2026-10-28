@@ -17,82 +17,87 @@
 </head>
 <body>
     
-    <div class="min-h-screen bg-gray-50">
-        <!-- Topbar -->
-        <div class="min-h-screen bg-gray-50">
-          <!-- Topbar -->
-          <header class="bg-[#F5B04B]">
-              <div class="max-w-6xl mx-auto px-4">
-                <div class="h-14 flex items-center justify-between">
-                  
-                  <!-- Logo o título -->
-                  <div class="font-bold text-gray-900">
-                    Todo a la mano
-                  </div>
-            
-                  <!-- Menú escritorio -->
-                  <nav class="hidden lg:flex gap-8 text-sm font-medium text-gray-900">
-                    <a class="hover:underline" href="../index.html">Hombre</a>
-                    <a class="hover:underline" href="../mujer/index.html">Mujer</a>
-                    <a class="hover:underline" href="../sobrenosotros/index.html">Sobre nosotros</a>
-                    <a class="hover:underline" href="../login/index.html">Iniciar sesión</a>
-                    <a class="hover:underline" href="../dashboard/index.html">Dashboard</a>
-                  </nav>
-            
-                  <!-- Iconos + hamburguesa -->
-                  <div class="flex items-center gap-4">
-                    <button class="p-1 rounded hover:bg-white/40" aria-label="Buscar">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010 18a7.5 7.5 0 006.65-1.65z"/>
-                      </svg>
-                    </button>
-            
-                    <button class="p-1 rounded hover:bg-white/40" aria-label="Cuenta">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 11a4 4 0 100-8 4 4 0 000 8z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M20 8v6"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M23 11h-6"/>
-                      </svg>
-                    </button>
-            
-                    <button class="p-1 rounded hover:bg-white/40" aria-label="Carrito">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h15l-1.5 9h-12z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l-2-2"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 20a1 1 0 100-2 1 1 0 000 2z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 20a1 1 0 100-2 1 1 0 000 2z"/>
-                      </svg>
-                    </button>
-            
-                    <!-- Botón hamburguesa -->
-                    <button id="menu-btn" class="lg:hidden p-1 rounded hover:bg-white/40" aria-label="Abrir menú">
-                      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-            
-                <!-- Menú móvil -->
-                <nav id="mobile-menu" class="hidden lg:hidden pb-4 flex flex-col gap-3 text-sm font-medium text-gray-900">
-                  <a class="hover:underline" href="../index.html">Hombre</a>
-                  <a class="hover:underline" href="../mujer/index.html">Mujer</a>
-                  <a class="hover:underline" href="../sobrenosotros/index.html">Sobre nosotros</a>
-                  <a class="hover:underline" href="../login/index.html">Iniciar sesión</a>
-                  <a class="hover:underline" href="../dashboard/index.html">Dashboard</a>
-                </nav>
-              </div>
-            </header>
-            
-            <script>
-              const menuBtn = document.getElementById('menu-btn');
-              const mobileMenu = document.getElementById('mobile-menu');
-            
-              menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-              });
-            </script>
+  <div class="min-h-screen bg-gray-50">
+    <!-- Topbar -->
+    <header class="bg-[#F5B04B] fixed top-0 left-0 right-0 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="h-14 flex items-center justify-between">
+
+          <!-- Logo o título -->
+          <div class="flex items-center">
+            <img src="../img/logo-removebg-preview.png" alt="Logo" class="h-12 w-auto mr-2" />
+            <div class="font-bold text-gray-900">
+              Todo a la mano
+            </div>
+          </div>
+
+          <!-- Menú escritorio -->
+          <nav class="hidden lg:flex gap-8 text-sm font-medium text-gray-900">
+            <a class="hover:underline" href="../index.html">Hombre</a>
+            <a class="hover:underline" href="#">Mujer</a>
+            <a class="hover:underline" href="../sobrenosotros/index.html">Sobre nosotros</a>
+            <a class="hover:underline" href="../login/index.html">Iniciar sesión</a>
+            <a class="hover:underline" href="../dashboard/index.html">Dashboard</a>
+          </nav>
+
+          <!-- Iconos + hamburguesa -->
+          <div class="flex items-center gap-4">
+            <button class="p-1 rounded hover:bg-white/40" aria-label="Buscar">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010 18a7.5 7.5 0 006.65-1.65z" />
+              </svg>
+            </button>
+
+            <button class="p-1 rounded hover:bg-white/40" aria-label="Cuenta">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 11a4 4 0 100-8 4 4 0 000 8z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 8v6" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M23 11h-6" />
+              </svg>
+            </button>
+
+            <button class="p-1 rounded hover:bg-white/40" aria-label="Carrito">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h15l-1.5 9h-12z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l-2-2" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20a1 1 0 100-2 1 1 0 000 2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 20a1 1 0 100-2 1 1 0 000 2z" />
+              </svg>
+            </button>
+
+            <!-- Botón hamburguesa -->
+            <button id="menu-btn" class="lg:hidden p-1 rounded hover:bg-white/40" aria-label="Abrir menú">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <nav id="mobile-menu" class="hidden lg:hidden pb-4 flex flex-col gap-3 text-sm font-medium text-gray-900">
+          <a class="hover:underline" href="#">Hombre</a>
+          <a class="hover:underline" href="./mujer/index.html">Mujer</a>
+          <a class="hover:underline" href="./sobrenosotros/index.html">Sobre nosotros</a>
+          <a class="hover:underline" href="./login/index.html">Iniciar sesión</a>
+          <a class="hover:underline" href="./dashboard/index.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+
+    <br>
+    <br>
       
         <main class="max-w-6xl mx-auto px-4 py-10">
           <!-- Title -->
@@ -173,7 +178,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-500/75 text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
                 COMPRA LO ULTIMO
               </button>
             </div>
@@ -187,7 +192,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-500/75 text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
                 COMPRA TUS FAVORITOS
               </button>
             </div>
@@ -201,11 +206,103 @@
               />
               <div class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+              <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-500/75 text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
                 OCASIÓN DE COMPRA
               </button>
             </div>
           </section>
+
+          <h1
+        class=" border-t border-gray-700 mt-15 text-2xl sm:text-3xl font-bold text-black mb-4 p-2 m-5 -translate-x-2 text-lg font-semibold mt-2">
+        Tus mejores <span class="text-amber-500">Accesorios</span></h1>
+
+      <section class=" mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="../img/mujer/accesorioswomen1.webp" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+        </div>
+
+        <!-- Banner middle -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="../img/mujer/accesorioswomen3.avif" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+        </div>
+
+        <!-- Banner right -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="../img/mujer/accesorioswomen2.avif" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          
+        </div>
+      </section>
+      <h1
+        class=" border-t border-gray-700 mt-15 text-2xl sm:text-3xl font-bold text-black mb-4 p-2 m-5 -translate-x-2 text-lg font-semibold mt-2">
+        Encuentra tus fragancias <span class="text-amber-500">Favoritas</span></h1>
+      <section class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="../img/mujer/fraganciawomen2.webp" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+        </div>
+
+        <!-- Banner middle -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="../img/mujer/fraganciamujer1.webp" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          
+        </div>
+
+        <!-- Banner right -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="../img/mujer/fraganciawomen3.webp" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+         
+        </div>
+      </section>
+    </main>
+  </div>
+
+  </main>
+  </div>
+
+  </main>
+  </div>
+
         </main>
       </div>
       
@@ -272,7 +369,7 @@
           <!-- Línea inferior -->
           <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
             <p>© 2026 Todo a la mano. Todos los derechos reservados.</p>
-            <P>Desarrollado por Victor Daniel López</P>
+            <a href="https://github.com/Vdlopezp" target="_blank" rel="noopener noreferrer"><P>Desarrollado por Victor Daniel López</P></a>
             <div class="flex gap-4">
               <a href="#" class="hover:text-white">Privacidad</a>
               <a href="#" class="hover:text-white">Términos</a>
