@@ -11,13 +11,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- 2. Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <script>
     tailwind.config = {
       theme: {
@@ -36,433 +36,484 @@
         },
       },
     }
-    </script>
-    
+  </script>
+
 
 </head>
+
 <body>
-    
-    <div class="min-h-screen bg-gray-50">
-        <!-- Topbar -->
-        <header class="bg-[#F5B04B]">
-          <div class="max-w-6xl mx-auto px-4">
-            <div class="h-14 flex items-center justify-between">
-              
-              <!-- Logo o título -->
-              <div class="flex items-center">
-                <img src="./img/logo-removebg-preview.png" alt="Logo" class="h-12 w-auto mr-2"/> <!-- Ajusta la ruta y el tamaño según necesites -->
-                <div class="font-bold text-gray-900">
-                    Todo a la mano
-                </div>
+
+  <div class="min-h-screen bg-gray-50">
+    <!-- Topbar -->
+    <header class="bg-[#F5B04B]">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="h-14 flex items-center justify-between">
+
+          <!-- Logo o título -->
+          <div class="flex items-center">
+            <img src="./img/logo-removebg-preview.png" alt="Logo" class="h-12 w-auto mr-2" />
+            <!-- Ajusta la ruta y el tamaño según necesites -->
+            <div class="font-bold text-gray-900">
+              Todo a la mano
             </div>
-            
-        
-              <!-- Menú escritorio -->
-              <nav class="hidden lg:flex gap-8 text-sm font-medium text-gray-900">
-                <a class="hover:underline" href="#">Hombre</a>
-                <a class="hover:underline" href="./mujer/index.html">Mujer</a>
-                <a class="hover:underline" href="./sobrenosotros/index.html">Sobre nosotros</a>
-                <a class="hover:underline" href="./login/index.html">Iniciar sesión</a>
-                <a class="hover:underline" href="./dashboard/index.html">Dashboard</a>
-              </nav>
-        
-              <!-- Iconos + hamburguesa -->
-              <div class="flex items-center gap-4">
-                <button class="p-1 rounded hover:bg-white/40" aria-label="Buscar">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010 18a7.5 7.5 0 006.65-1.65z"/>
-                  </svg>
-                </button>
-        
-                <button class="p-1 rounded hover:bg-white/40" aria-label="Cuenta">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 11a4 4 0 100-8 4 4 0 000 8z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M20 8v6"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M23 11h-6"/>
-                  </svg>
-                </button>
-        
-                <button class="p-1 rounded hover:bg-white/40" aria-label="Carrito">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h15l-1.5 9h-12z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l-2-2"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 20a1 1 0 100-2 1 1 0 000 2z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 20a1 1 0 100-2 1 1 0 000 2z"/>
-                  </svg>
-                </button>
-        
-                <!-- Botón hamburguesa -->
-                <button id="menu-btn" class="lg:hidden p-1 rounded hover:bg-white/40" aria-label="Abrir menú">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-        
-            <!-- Menú móvil -->
-            <nav id="mobile-menu" class="hidden lg:hidden pb-4 flex flex-col gap-3 text-sm font-medium text-gray-900">
-              <a class="hover:underline" href="#">Hombre</a>
-              <a class="hover:underline" href="./mujer/index.html">Mujer</a>
-              <a class="hover:underline" href="./sobrenosotros/index.html">Sobre nosotros</a>
-              <a class="hover:underline" href="./login/index.html">Iniciar sesión</a>
-              <a class="hover:underline" href="./dashboard/index.html">Dashboard</a>
-            </nav>
-          </div>
-        </header>
-        
-        <script>
-          const menuBtn = document.getElementById('menu-btn');
-          const mobileMenu = document.getElementById('mobile-menu');
-        
-          menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-          });
-        </script>
-        
-      
-        <main class="max-w-6xl mx-auto px-4 py-10">
-          <!-- Title -->
-          <h2 class="text-center text-lg md:text-xl text-gray-800 mb-8">
-            Compra por categoria
-          </h2>
-      
-          <!-- Categories grid (6 items) -->
-          <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 ">
-            <!-- Item 1 -->
-            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
-              <div class=" h-44 md:h-48 w-full h-auto bg-gradient-to-br from-rose-300 to-amber-200 hover:scale-[1.06] transition-transform duration-300">
-                <img src="./img/shirts.jpeg" alt="">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
-                CAMISAS
-              </div>
-            </a>
-      
-            <!-- Item 2 -->
-            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
-              <div class="h-44 md:h-48 w-full bg-gradient-to-br from-slate-700 to-slate-200 hover:scale-[1.06] transition-transform duration-300">
-                <img src="./img/denim.jpeg" alt="">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
-                JEANS
-              </div>
-            </a>
-      
-            <!-- Item 3 -->
-            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
-              <div class="h-50 md:h-45 w-full bg-gradient-to-br from-amber-100 to-orange-200 hover:scale-[1.06] transition-transform duration-300">
-                <img src="./img/tees.jpeg" alt="">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
-                CAMISETAS
-              </div>
-            </a>
-      
-            <!-- Item 4 -->
-            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
-              <div class="h-44 md:h-48 w-full bg-gradient-to-br from-indigo-900 to-blue-200 hover:scale-[1.06] transition-transform duration-300">
-                <img src="./img/pants.jpeg" alt="">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
-                PANTALONES
-              </div>
-            </a>
-      
-            <!-- Item 5 -->
-            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
-              <div class="h-50 md:h-45 w-full bg-gradient-to-br from-amber-200 to-rose-200 hover:scale-[1.06] transition-transform duration-300">
-                <img src="./img/sweater.jpeg" alt="">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
-                SUÉTERES
-              </div>
-            </a>
-      
-            <!-- Item 6 -->
-            <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
-              <div class="h-44 md:h-48 w-full  bg-gradient-to-br from-gray-900 to-gray-300 hover:scale-[1.06] transition-transform duration-300">
-                <img src="./img/outwear.jpeg" alt="">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
-                ABRIGOS
-              </div>
-            </a>
-          </section>
-
-          <section class="mt-10 bg-[#F5B04B] p-6 rounded-lg">
-            <div class="max-w-6xl mx-auto text-center">
-              <h2 class="text-2xl font-bold text-slate-900 mb-4 animate-ping ;
-              opacity: 0; ">¡Ofertas Exclusivas!</h2>
-              
-              <p class="text-gray-700 mb-4">Aprovecha descuentos de hasta el 50% en productos seleccionados.</p>
-              <a href="#" class="bg-gray-900 text-white font-semibold py-2 px-4 rounded hover:bg-slate-600 transition duration-300">Ver Ofertas</a>
-            </div>
-          </section>
-      
-                  <!-- Banners -->
-        <section class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Banner left -->
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/blackred.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              COMPRA LO ULTIMO
-            </button>
           </div>
 
-          <!-- Banner middle -->
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/blackandwhite.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              COMPRA TUS FAVORITOS
-            </button>
-          </div>
 
-          <!-- Banner right -->
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/amber.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              OCASIÓN DE COMPRA
-            </button>
-          </div>
-        </section>
-      
-        <h1 class=" border-t border-gray-700 mt-15 text-2xl sm:text-3xl font-bold text-black mb-4 p-2 m-5 -translate-x-2 text-lg font-semibold mt-2">Tus mejores <span class="text-amber-500">Accesorios</span></h1>
-        
-        <section class=" mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/blackred.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              ACCESORIOS
-            </button>
-          </div>
+          <!-- Menú escritorio -->
+          <nav class="hidden lg:flex gap-8 text-sm font-medium text-gray-900">
+            <a class="hover:underline" href="#">Hombre</a>
+            <a class="hover:underline" href="./mujer/index.html">Mujer</a>
+            <a class="hover:underline" href="./sobrenosotros/index.html">Sobre nosotros</a>
+            <a class="hover:underline" href="./login/index.html">Iniciar sesión</a>
+            <a class="hover:underline" href="./dashboard/index.html">Dashboard</a>
+          </nav>
 
-          <!-- Banner middle -->
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/blackandwhite.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              ACCESORIOS
+          <!-- Iconos + hamburguesa -->
+          <div class="flex items-center gap-4">
+            <button class="p-1 rounded hover:bg-white/40" aria-label="Buscar">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010 18a7.5 7.5 0 006.65-1.65z" />
+              </svg>
             </button>
-          </div>
 
-          <!-- Banner right -->
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/amber.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              ACCESORIOS
+            <button class="p-1 rounded hover:bg-white/40" aria-label="Cuenta">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 11a4 4 0 100-8 4 4 0 000 8z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 8v6" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M23 11h-6" />
+              </svg>
             </button>
-          </div>
-        </section>
-        <h1 class=" border-t border-gray-700 mt-15 text-2xl sm:text-3xl font-bold text-black mb-4 p-2 m-5 -translate-x-2 text-lg font-semibold mt-2">Encuentra tus fragancias <span class="text-amber-500">Favoritas</span></h1>
-        <section class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/blackred.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              FRAGANCIAS
-            </button>
-          </div>
 
-          <!-- Banner middle -->
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/blackandwhite.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              FRAGANCIAS
+            <button class="p-1 rounded hover:bg-white/40" aria-label="Carrito">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h15l-1.5 9h-12z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l-2-2" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20a1 1 0 100-2 1 1 0 000 2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 20a1 1 0 100-2 1 1 0 000 2z" />
+              </svg>
+            </button>
+
+            <!-- Botón hamburguesa -->
+            <button id="menu-btn" class="lg:hidden p-1 rounded hover:bg-white/40" aria-label="Abrir menú">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             </button>
           </div>
+        </div>
 
-          <!-- Banner right -->
-          <div class="group relative h-64 overflow-hidden rounded-lg">
-            <img
-              src="./img/amber.jpeg"
-              alt=""
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
-              FRAGANCIAS
-            </button>
-          </div>
-        </section>
-      </main>
-    </div>
-        
-      </main>
-    </div>
-        
-      </main>
-    </div>
+        <!-- Menú móvil -->
+        <nav id="mobile-menu" class="hidden lg:hidden pb-4 flex flex-col gap-3 text-sm font-medium text-gray-900">
+          <a class="hover:underline" href="#">Hombre</a>
+          <a class="hover:underline" href="./mujer/index.html">Mujer</a>
+          <a class="hover:underline" href="./sobrenosotros/index.html">Sobre nosotros</a>
+          <a class="hover:underline" href="./login/index.html">Iniciar sesión</a>
+          <a class="hover:underline" href="./dashboard/index.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
 
-    
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+
 
     <main class="max-w-6xl mx-auto px-4 py-10">
+      <!-- Title -->
+      <h2 class="text-center text-lg md:text-xl text-gray-800 mb-8">
+        Compra por categoria
+      </h2>
+
+      <!-- Categories grid (6 items) -->
+      <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 ">
+        <!-- Item 1 -->
+        <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+          <div
+            class=" h-44 md:h-48 w-full h-auto bg-gradient-to-br from-rose-300 to-amber-200 hover:scale-[1.06] transition-transform duration-300">
+            <img src="./img/shirts.jpeg" alt="">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+            CAMISAS
+          </div>
+        </a>
+
+        <!-- Item 2 -->
+        <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+          <div
+            class="h-44 md:h-48 w-full bg-gradient-to-br from-slate-700 to-slate-200 hover:scale-[1.06] transition-transform duration-300">
+            <img src="./img/denim.jpeg" alt="">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+            JEANS
+          </div>
+        </a>
+
+        <!-- Item 3 -->
+        <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+          <div
+            class="h-50 md:h-45 w-full bg-gradient-to-br from-amber-100 to-orange-200 hover:scale-[1.06] transition-transform duration-300">
+            <img src="./img/tees.jpeg" alt="">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+            CAMISETAS
+          </div>
+        </a>
+
+        <!-- Item 4 -->
+        <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+          <div
+            class="h-44 md:h-48 w-full bg-gradient-to-br from-indigo-900 to-blue-200 hover:scale-[1.06] transition-transform duration-300">
+            <img src="./img/pants.jpeg" alt="">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+            PANTALONES
+          </div>
+        </a>
+
+        <!-- Item 5 -->
+        <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+          <div
+            class="h-50 md:h-45 w-full bg-gradient-to-br from-amber-200 to-rose-200 hover:scale-[1.06] transition-transform duration-300">
+            <img src="./img/sweater.jpeg" alt="">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+            SUÉTERES
+          </div>
+        </a>
+
+        <!-- Item 6 -->
+        <a class="group relative overflow-hidden rounded-lg bg-white shadow-sm" href="#">
+          <div
+            class="h-44 md:h-48 w-full  bg-gradient-to-br from-gray-900 to-gray-300 hover:scale-[1.06] transition-transform duration-300">
+            <img src="./img/outwear.jpeg" alt="">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-white/90 border-t px-3 py-2 text-center text-xs font-semibold tracking-widest text-gray-700">
+            ABRIGOS
+          </div>
+        </a>
+      </section>
+
+      <section class="mt-10 bg-[#F5B04B] p-6 rounded-lg">
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 animate-ping ;
+              opacity: 0; ">¡Ofertas Exclusivas!</h2>
+
+          <p class="text-gray-700 mb-4">Aprovecha descuentos de hasta el 50% en productos seleccionados.</p>
+          <a href="#"
+            class="bg-gray-900 text-white font-semibold py-2 px-4 rounded hover:bg-slate-600 transition duration-300">Ver
+            Ofertas</a>
+        </div>
+      </section>
+
+      <!-- Banners -->
+      <section class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Banner left -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/blackred.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            COMPRA LO ULTIMO
+          </button>
+        </div>
+
+        <!-- Banner middle -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/blackandwhite.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            COMPRA TUS FAVORITOS
+          </button>
+        </div>
+
+        <!-- Banner right -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/amber.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            OCASIÓN DE COMPRA
+          </button>
+        </div>
+      </section>
+
+      <h1
+        class=" border-t border-gray-700 mt-15 text-2xl sm:text-3xl font-bold text-black mb-4 p-2 m-5 -translate-x-2 text-lg font-semibold mt-2">
+        Tus mejores <span class="text-amber-500">Accesorios</span></h1>
+
+      <section class=" mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/blackred.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            ACCESORIOS
+          </button>
+        </div>
+
+        <!-- Banner middle -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/blackandwhite.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            ACCESORIOS
+          </button>
+        </div>
+
+        <!-- Banner right -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/amber.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            ACCESORIOS
+          </button>
+        </div>
+      </section>
+      <h1
+        class=" border-t border-gray-700 mt-15 text-2xl sm:text-3xl font-bold text-black mb-4 p-2 m-5 -translate-x-2 text-lg font-semibold mt-2">
+        Encuentra tus fragancias <span class="text-amber-500">Favoritas</span></h1>
+      <section class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/blackred.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-[#F5B04B]/80 opacity-10 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            FRAGANCIAS
+          </button>
+        </div>
+
+        <!-- Banner middle -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/blackandwhite.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-gray-300/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            FRAGANCIAS
+          </button>
+        </div>
+
+        <!-- Banner right -->
+        <div class="group relative h-64 overflow-hidden rounded-lg">
+          <img src="./img/amber.jpeg" alt=""
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-orange-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,255,255,0.25),transparent_55%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <button
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F5B04B] text-gray-900 font-semibold text-sm px-7 py-2 rounded-md shadow hover:scale-[1.06] transition-transform duration-300">
+            FRAGANCIAS
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  </main>
+  </div>
+
+  </main>
+  </div>
+
+
+
+  <main class="max-w-6xl mx-auto px-4 py-10">
     <section id="contacto" class="bg-amber-500/20 py-10">
       <!-- Se añadió px-4 para que no pegue a los lados en móvil -->
       <div class="max-w-6xl mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-6">Contacto</h2>
-          
-          <!-- Se añadió gap-8 para separar formulario y mapa -->
-          <div class="flex flex-wrap -mx-4">
-              
-              <!-- Formulario -->
-              <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
-                  <input type="text" placeholder="Tu Nombre" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30"/>
-                  <input type="email" placeholder="Número Telefónico" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30"/>
-                  <input type="text" placeholder="Dirección de Correo" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30"/>
-                  <input type="text" placeholder="Tema" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30"/>
-                  <textarea placeholder="Tu Mensaje" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30" cols="30" rows="10"></textarea>
-                  <button class="w-full bg-black text-white py-2 px-4 rounded hover:bg-amber-500 transition">
-                      Enviar <i class="fa-solid fa-paper-plane"></i>
-                  </button>
-              </div>
-  
-              <!-- Mapa -->
-              <div class="w-full md:w-1/2 px-4">
-                  <img src="./img/ubicacion.jpeg" alt="Ubicación" class="w-full h-auto mb-4 rounded shadow-md"/>
-                  <div class="info bg-white p-4 rounded shadow">
-                      <ul class="list-none">
-                          <li class="flex items-center mb-2">
-                              <i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Garzón, Huila, Colombia
-                          </li>
-                          <li class="flex items-center mb-2">
-                              <i class="fa-solid fa-mobile-screen mr-2 text-amber-500"></i> Llama: +57 350 514 1750
-                          </li>
-                          <li class="flex items-center">
-                              <i class="fa-solid fa-envelope mr-2 text-amber-500"></i> E-mail: danielopezsb@gmail.com
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  </main>
-  
+        <h2 class="text-3xl font-bold text-center mb-6">Contacto</h2>
 
-      <!-- Footer -->
-      <footer class="bg-gray-900 text-gray-300 mt-6">
-        <div class="max-w-6xl mx-auto px-4 py-5">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Se añadió gap-8 para separar formulario y mapa -->
+        <div class="flex flex-wrap -mx-4">
 
-            <!-- Marca -->
-            <div>
-              <h2 class="text-white text-xl font-bold mb-4">Todo a la mano</h2>
-              <p class="text-xs leading-6">
-                Moda, estilo y calidad para tu día a día.
-              </p>
-            </div>
-
-            <!-- Enlaces -->
-            <div>
-              <h3 class="text-white font-semibold mb-4">Enlaces</h3>
-              <ul class="space-y-2 text-xs">
-                <li><a href="#" class="hover:text-white">Hombre</a></li>
-                <li><a href="./mujer/index.html" class="hover:text-white">Mujer</a></li>
-                <li><a href="./sobrenosotros/index.html" class="hover:text-white">Sobre nosotros</a></li>
-                <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
-              </ul>
-            </div>
-
-            <!-- Ayuda -->
-            <div>
-              <h3 class="text-white font-semibold mb-4">Ayuda</h3>
-              <ul class="space-y-2 text-xs">
-                <li><a href="#" class="hover:text-white">Preguntas frecuentes</a></li>
-                <li><a href="#" class="hover:text-white">Envíos y devoluciones</a></li>
-                <li><a href="#" class="hover:text-white">Políticas</a></li>
-                <li><a href="#" class="hover:text-white">Soporte</a></li>
-              </ul>
-            </div>
-
-            <!-- Redes sociales -->
-            <div>
-              <h3 class="text-white font-semibold mb-4">Síguenos</h3>
-              <div class="flex gap-4">
-                <a href="#" class="hover:text-white" aria-label="Facebook">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22 12a10 10 0 10-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.7-1.6 1.5V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/>
-                  </svg>
-                </a>
-
-                <a href="#" class="hover:text-white" aria-label="Instagram">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A4.5 4.5 0 1112 16a4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zm4.75-2.25a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
-                  </svg>
-                </a>
-
-                <a href="#" class="hover:text-white" aria-label="Twitter/X">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.9 2H22l-6.8 7.8L23 22h-6.8l-5.3-6.7L5.1 22H2l7.3-8.4L1 2h6.9l4.8 6.1L18.9 2zm-1.2 18h1.9L7 3.9H5L17.7 20z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
+          <!-- Formulario -->
+          <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+            <input type="text" placeholder="Tu Nombre"
+              class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30 rounded hover:bg-gray-200 transition focus:outline-none focus:border-gray-500" />
+            <input type="email" placeholder="Número Telefónico"
+              class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30 rounded hover:bg-gray-200 transition focus:outline-none focus:border-gray-500" />
+            <input type="text" placeholder="Dirección de Correo"
+              class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30 rounded hover:bg-gray-200 transition focus:outline-none focus:border-gray-500" />
+            <input type="text" placeholder="Tema"
+              class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30 rounded hover:bg-gray-200 transition focus:outline-none focus:border-gray-500" />
+            <textarea placeholder="Tu Mensaje" class="w-full p-2 mb-4 border border-gray-300 rounded bg-slate-200/30 rounded hover:bg-gray-200 transition focus:outline-none focus:border-gray-500"
+              cols="30" rows="10"></textarea>
+            <button class="w-full bg-black text-white py-2 px-4 rounded hover:bg-amber-500 transition">
+              Enviar <i class="fa-solid fa-paper-plane"></i>
+            </button>
           </div>
 
-          <!-- Línea inferior -->
-          <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-            <p>© 2026 Todo a la mano. Todos los derechos reservados.</p>
-            <a href="https://github.com/Vdlopezp" target="_blank" rel="noopener noreferrer"><P>Desarrollado por Victor Daniel López</P></a>
-            <div class="flex gap-4">
-              <a href="#" class="hover:text-white">Privacidad</a>
-              <a href="#" class="hover:text-white">Términos</a>
+          <!-- Mapa -->
+          <div class="w-full md:w-1/2 px-4">
+            <img src="./img/ubicacion.jpeg" alt="Ubicación" class="w-full h-auto mb-4 rounded shadow-md" />
+            <div class="info bg-white p-4 rounded shadow">
+              <ul class="list-none">
+                <li class="flex items-center mb-2">
+                  <i class="fa-solid fa-location-dot mr-2 text-amber-500"></i> Garzón, Huila, Colombia
+                </li>
+                <li class="flex items-center mb-2">
+                  <i class="fa-solid fa-mobile-screen mr-2 text-amber-500"></i> Llama: +57 350 514 1750
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-envelope mr-2 text-amber-500"></i> E-mail: danielopezsb@gmail.com
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </section>
+  </main>
 
-    
 
-      
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 mt-6">
+    <div class="max-w-6xl mx-auto px-4 py-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Marca -->
+        <div>
+          <h2 class="text-white text-xl font-bold mb-4">Todo a la mano</h2>
+          <p class="text-xs leading-6">
+            Moda, estilo y calidad para tu día a día.
+          </p>
+        </div>
+
+        <!-- Enlaces -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Enlaces</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white">Hombre</a></li>
+            <li><a href="./mujer/index.html" class="hover:text-white">Mujer</a></li>
+            <li><a href="./sobrenosotros/index.html" class="hover:text-white">Sobre nosotros</a></li>
+            <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Ayuda -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Ayuda</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white">Preguntas frecuentes</a></li>
+            <li><a href="#" class="hover:text-white">Envíos y devoluciones</a></li>
+            <li><a href="#" class="hover:text-white">Políticas</a></li>
+            <li><a href="#" class="hover:text-white">Soporte</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Síguenos</h3>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-white" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22 12a10 10 0 10-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.7-1.6 1.5V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z" />
+              </svg>
+            </a>
+
+            <a href="#" class="hover:text-white" aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A4.5 4.5 0 1112 16a4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zm4.75-2.25a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z" />
+              </svg>
+            </a>
+
+            <a href="#" class="hover:text-white" aria-label="Twitter/X">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.9 2H22l-6.8 7.8L23 22h-6.8l-5.3-6.7L5.1 22H2l7.3-8.4L1 2h6.9l4.8 6.1L18.9 2zm-1.2 18h1.9L7 3.9H5L17.7 20z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea inferior -->
+      <div
+        class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <p>© 2026 Todo a la mano. Todos los derechos reservados.</p>
+        <a href="https://github.com/Vdlopezp" target="_blank" rel="noopener noreferrer">
+          <P>Desarrollado por Victor Daniel López</P>
+        </a>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white">Privacidad</a>
+          <a href="#" class="hover:text-white">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
 
 </body>
+
 </html>
